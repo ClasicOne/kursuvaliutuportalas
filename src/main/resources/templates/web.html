@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>
+            <form method="post">
+                <select name="name" required="true">
+                    <option th:type="text" th:name="name" name="name" th:each="code : ${json}"
+                            th:value="${code.getCode()}"
+                            th:text="${code.getCode()}"
+                            >Options</option>
+                </select>
+                <button type="submit">submit</button>
+            </form>
+        </th>
+        <th>
+            <table border="1" style="width:300px" method="post">
+                <tr>
+                    <td th:text="${sCode}">USD</td>
+                </tr>
+                <tr th:each="dataPointsList : ${dataPointsList}">
+                    <td th:text="${dataPointsList.getValue()}">A Smoke Test'</td>
+                    <th th:text="${dataPointsList.getTime()}">A Smoke Test'</th>
+                </tr>
+            </table>
+        </th>
+        <th>
+            <form method="post">
+                <input type="number" step="0.01" name="input" required="true">
+                <select name="convert" required="true">
+                    <option th:type="text" th:name="convert" name="convert" th:each="code : ${json}"
+                            th:value="${code.getCode()}"
+                            th:text="${code.getCode()}"
+                    >Options</option>
+                </select>
+                <button type="submit">submit</button>
+                <p th:text="${result}">Value</p>
+            </form>
+        </th>
+    </tr>
+</table>
+
+
+
+</body>
+</html>

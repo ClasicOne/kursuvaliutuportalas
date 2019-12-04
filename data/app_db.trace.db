@@ -1,0 +1,9 @@
+2019-12-03 16:20:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT DISTINCT CODE * FROM CURRENCY_TIMELINE [*]"; expected "., (, USE, AS, RIGHT, LEFT, FULL, INNER, JOIN, CROSS, NATURAL, ,, SELECT"; SQL statement:
+select distinct code * from CURRENCY_TIMELINE [42001-199]
+2019-12-03 16:21:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CURRENCY_TIMELINE WHERE CODE DISTINCT[*] "; SQL statement:
+select * from CURRENCY_TIMELINE where code distinct [42000-199]
+2019-12-03 16:21:36 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM CURRENCY_TIMELINE WHERE DISTINCT[*] CODE "; expected "NOT, EXISTS, INTERSECTS"; SQL statement:
+select * from CURRENCY_TIMELINE where distinct code [42001-199]
